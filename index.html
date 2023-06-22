@@ -5,37 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
+    <title>Meal Finder App</title>
+    <!-- css link -->
     <link rel="stylesheet" href="style.css">
-    <title>Meal Apk</title>
+    <!-- Icon link -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
-    <!-- Header section start -->
-    <header class="header">
-        <!-- Logo img -->
-        <div class="logo">
-            <img src="image/logo.png" alt="Logo">
-            <span>Meal App</span>
+
+    <div class="container">
+        <h1>Your favourite meal here...</h1>
+        <div class="flex">
+            <form class="flex" id="submit">
+                <input type="text" id="search" placeholder="Search For Meal">
+                <button class="search-btn" type="submit">
+                    <i><span class="material-symbols-outlined">
+                            search
+                        </span></i>
+            </form>
+
+            <button class="random-btn" id="random">
+                <i><span class="material-symbols-outlined">
+                        shuffle
+                    </span></i>
+            </button>
+
         </div>
-        <!-- Search -->
-        <div class="search" onkeyup="getMeal()">
-            <input type="search" placeholder="Search Meal">
-        </div>
-        <!-- Favorite icon -->
-        <div class="favouriteibutton">
-            <i class="icon uil uil-heart-alt"></i>
-        </div>
-    </header>
-    <!-- There is store all meals from Api -->
-    <section class="mealbox"></section>
-    <div class="alert">
+
+        <div class="result-heading"></div>
+        <div class="meals" id="meals"></div>
+        <div id="single-meal"></div>
 
     </div>
-    <!-- These pop-up window for store Paticular meal -->
-    <div class="mealdetail"></div>
-    <!-- These Slide Window store Favorite Meal  -->
-    <div class="favoutieitembox"></div>
+
+
+
+    <!-- Java Script link -->
     <script src="index.js"></script>
 </body>
+
 </html>
